@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block 'contenido'%}
+<div class="container">
+
+<!--formulario para crear cliente-->
+{% block 'formulario' %}
+{% include "formulario_cliente.html" %}
+{% endblock  %}
+
+<br><hr>
+
+<!--tabla para mostrar clientes-->
+{% block 'tabla' %}
+{% include "tabla.html" %}
+{% endblock  %}
+
+<br><hr>
+
+
+</div>
+{% endblock %}

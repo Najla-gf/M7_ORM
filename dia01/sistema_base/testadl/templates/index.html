@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Nuestros productos</h1>
+    <p class="lead">En OnlyFlans, nos enorgullece ofrecer una variedad de postres deliciosos y de alta calidad. 
+        Cada uno de nuestros flanes es elaborado con los mejores ingredientes y mucho cariño para brindar una experiencia única en cada bocado. 
+        Descubre nuestra selección y déjate tentar por nuestros sabores exquisitos.</p>
+    <div class="row">
+        {% for flan in flanes %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ flan.name }}</h5>
+                    <p class="card-text">{{ flan.description }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
