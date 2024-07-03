@@ -1,0 +1,60 @@
+# Ejemplo en el shell de Django
+source vdemo2/Scripts/activate
+cd desafio_evaluado2
+python manage.py shell 
+
+from registro_cursos.models import Curso, Profesor, Estudiante, Direccion
+from registro_cursos.services import *
+
+# Crear un curso
+curso1 = crear_curso("MAT101", "Matemáticas Básicas", 1)
+print(curso1)
+
+# Crear un profesor
+profesor1 = crear_profesor("12345678-9", "Juan", "Pérez", "Admin")
+print(profesor1)
+
+# Crear un estudiante
+estudiante1 = crear_estudiante("98765432-1", "María", "González", "2000-05-15", "MAT101")
+print(estudiante1)
+
+# Crear una dirección para un estudiante
+direccion1 = crear_direccion("98765432-1", "Av. Libertad", "123", "Providencia", "Santiago", "Metropolitana")
+print(direccion1)
+
+# Obtener un estudiante
+estudiante_obtenido = obtiene_estudiante("98765432-1")
+print(estudiante_obtenido)
+
+# Obtener un profesor
+profesor_obtenido = obtiene_profesor("12345678-9")
+print(profesor_obtenido)
+
+# Obtener un curso
+curso_obtenido = obtiene_curso("MAT101")
+print(curso_obtenido)
+
+# Agregar un profesor a un curso
+curso_agregado = agrega_profesor_a_curso("12345678-9", "MAT101")
+print(f"Profesor agregado al curso: {curso_agregado}")
+
+# Agregar cursos a un estudiante
+curso2 = crear_curso("MAT102", "Matemáticas Avanzadas", 2)
+print(curso2)
+
+cursos_agregados_estudiante = agrega_cursos_a_estudiante("98765432-1", "MAT102")
+print(f"Cursos del estudiante actualizados: {cursos_agregados_estudiante}")
+
+# Imprimir cursos de un estudiante
+cursos_estudiante = imprime_estudiante_cursos("98765432-1")
+print(f"Cursos del estudiante: {cursos_estudiante}")
+
+
+agrega_cursos_a_estudiante("87654321-0", "MAT102")
+agrega_cursos_a_estudiante("76543210-2", "LIT101")
+agrega_cursos_a_estudiante("98765432-1", "LIT101")
+
+print(f"Cursos de María González: {imprime_estudiante_cursos('98765432-1')}")
+print(f"Cursos de Carlos Martínez: {imprime_estudiante_cursos('87654321-0')}")
+print(f"Cursos de Laura Díaz: {imprime_estudiante_cursos('76543210-2')}")
+

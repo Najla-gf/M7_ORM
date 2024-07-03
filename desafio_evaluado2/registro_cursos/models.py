@@ -8,7 +8,7 @@ class Curso(models.Model):
     version = models.IntegerField()
 
     def __str__(self):
-        return self.nombre
+        return f"({self.codigo}) {self.nombre} ({self.version})"
 
 
 class Profesor(models.Model):
@@ -23,8 +23,7 @@ class Profesor(models.Model):
     cursos=models.ManyToManyField(Curso, related_name='profesores')
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido} ({self.rut})"
-
+        return f"({self.rut}) - {self.nombre} {self.apellido}"
 
 
 class Estudiante(models.Model):
@@ -40,7 +39,7 @@ class Estudiante(models.Model):
     curso = models.ForeignKey(Curso, related_name='estudiantes', on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido} ({self.rut})"
+        return f"({self.rut}) - {self.nombre} {self.apellido}"
 
 class Direccion(models.Model):
     id = models.AutoField(primary_key=True)
@@ -54,5 +53,5 @@ class Direccion(models.Model):
     estudiante = models.OneToOneField(Estudiante, related_name='direcciones', null=False, blank=False, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.calle} {self.numero}, {self.comuna}, {self.ciudad}"
+        return f"{self.calle} #{self.numero}, {self.comuna}, {self.ciudad}."
 

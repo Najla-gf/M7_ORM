@@ -28,9 +28,9 @@ cd nombre_proyecto
 ## Paso 4.5: Crear la base de datos
 ### Base de Datos (Terminal Bash)
 ```sql
-CREATE DATABASE nombre_bbdd;
+CREATE DATABASE nombre_bd;
 \l                     -- lista bases de datos creadas 
-\c nombre_bbdd         -- conectarse a la base de datos 
+\c nombre_bd         -- conectarse a la base de datos 
 \q                     -- salir de la base de datos
 ```
 
@@ -39,7 +39,7 @@ CREATE DATABASE nombre_bbdd;
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nombre_bbdd',
+        'NAME': 'nombre_bd',
         'USER': 'postgres',
         'PASSWORD': 'Admin1234',
         'HOST': '127.0.0.1',

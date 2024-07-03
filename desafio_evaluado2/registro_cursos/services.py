@@ -12,8 +12,9 @@ def crear_profesor(pRut, pNombre, pApellido, pCreado_por, pActivo=False):
     profesor.save()
     return profesor
 
-def crear_estudiante(pRut, pNombre, pApellido, pFecha_nac, pActivo=False):
-    estudiante = Estudiante(rut=pRut, nombre=pNombre, apellido=pApellido, fecha_nac=pFecha_nac, activo=pActivo)
+def crear_estudiante(pRut, pNombre, pApellido, pFecha_nac, pCodigo_curso, pActivo=False):
+    curso = Curso.objects.get(pk=pCodigo_curso)
+    estudiante = Estudiante(rut=pRut, nombre=pNombre, apellido=pApellido, fecha_nac=pFecha_nac, activo=pActivo, curso=curso)
     estudiante.save()
     return estudiante
 
@@ -38,13 +39,25 @@ def agrega_profesor_a_curso(rut, codigo):
     profesor = obtiene_profesor(rut)
     curso = obtiene_curso(codigo)
     profesor.cursos.add(curso)
+    return curso
 
 def agrega_cursos_a_estudiante(rut, codigo):
-    estudiante = obtiene_estudiante(rut)
-    curso = obtiene_curso(codigo)
-    estudiante.curso.add(curso)
+    estudiante = Estudiante.objects.get(rut=rut)
+    curso = Curso.objects.get(codigo=codigo)
+
+    # Agregar el curso al estudiante
+    estudiante.curso = curso
+    estudiante.save()
+    return estudiante
 
 def imprime_estudiante_cursos(rut):
     estudiante = obtiene_estudiante(rut)
-    cursos = estudiante.cursos.all() 
-    return [curso.nombre for curso in cursos]
+    if estudiante:
+        curso = estudiante.curso
+        if curso:
+            print(f"({rut}) - {estudiante.nombre} {estudiante.apellido} Curso: ({curso.codigo}) {curso.nombre}")
+        else:
+            print(f"El estudiante ({rut}) no está inscrito en ningún curso.")
+    else:
+        print(f"No se encontró ningún estudiante con el RUT {rut}.")
+
