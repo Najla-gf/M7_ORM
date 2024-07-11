@@ -1,0 +1,58 @@
+[
+    {
+        "model": "gestionApp.usuario",
+        "pk": 1,
+        "fields": {
+            "nombre": "Juan",
+            "apellido": "Pérez",
+            "tipo_usuario": 1
+        }
+    },
+    {
+        "model": "gestionApp.usuario",
+        "pk": 2,
+        "fields": {
+            "nombre": "María",
+            "apellido": "Gómez",
+            "tipo_usuario": 1
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 1,
+        "fields": {
+            "nombre": "Casa en La Serena",
+            "descripcion": "Amplia casa cerca de la playa",
+            "m2_construidos": 200,
+            "m2_totales": 300,
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 4,
+            "cantidad_banos": 3,
+            "direccion": "Av. Costanera 123",
+            "tipo_inmueble": 1,
+            "precio_mensual": "1200000.00",
+            "arrendador": 1,
+            "region": 5,
+            "comuna": 13
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 2,
+        "fields": {
+            "nombre": "Departamento en Santiago",
+            "descripcion": "Moderno departamento en el centro",
+            "m2_construidos": 80,
+            "m2_totales": 90,
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 2,
+            "cantidad_banos": 1,
+            "direccion": "Moneda 456",
+            "tipo_inmueble": 2,
+            "precio_mensual": "800000.00",
+            "arrendador": 2,
+            "region": 13,
+            "comuna": 37
+        }
+    }
+]
