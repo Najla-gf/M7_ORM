@@ -1,0 +1,84 @@
+Listado de Inmuebles por Comuna:
+
+Comuna: Cerrillos
+Nombre: Departamento en el centro
+Descripción: Cómodo departamento en el centro de la ciudad
+
+Comuna: Cerro Navia
+Nombre: Departamento con terraza
+Descripción: Departamento moderno con amplia terraza
+
+Comuna: Conchalí
+Nombre: Casa en la playa
+Descripción: Amplia casa con vista al mar
+
+Nombre: Apartamento moderno
+Descripción: Apartamento con diseño moderno y excelente ubicación
+
+Comuna: El Bosque
+Nombre: Casa familiar en el campo
+Descripción: Espaciosa casa perfecta para familias
+
+Comuna: Estación Central
+Nombre: Oficina en el centro financiero
+Descripción: Moderna oficina en el corazón del centro financiero
+
+Comuna: Huechuraba
+Nombre: Estudio en el casco histórico
+Descripción: Estudio renovado en el casco histórico de la ciudad
+
+Comuna: Independencia
+Nombre: Cabaña en la montaña
+Descripción: Acogedora cabaña rodeada de naturaleza
+
+Comuna: La Cisterna
+Nombre: Piso alto con vistas
+Descripción: Departamento en piso alto con impresionantes vistas de la ciudad
+
+Comuna: La Florida
+Nombre: Chalet en urbanización privada
+Descripción: Chalet en exclusiva urbanización con seguridad 24 horas
+
+Comuna: La Granja
+Comuna: La Pintana
+Comuna: La Reina
+Comuna: Las Condes
+Comuna: Lo Barnechea
+Comuna: Lo Espejo
+Comuna: Lo Prado
+Comuna: Macul
+Comuna: Maipú
+Comuna: Ñuñoa
+Comuna: Pedro Aguirre Cerda
+Comuna: Peñalolén
+Comuna: Providencia
+Comuna: Pudahuel
+Comuna: Quilicura
+Comuna: Quinta Normal
+Comuna: Recoleta
+Comuna: Renca
+Comuna: Santiago
+Comuna: San Joaquín
+Comuna: San Miguel
+Comuna: San Ramón
+Comuna: Vitacura
+Comuna: Puente Alto
+Comuna: Pirque
+Comuna: San José de Maipo
+Comuna: Colina
+Comuna: Lampa
+Comuna: Tiltil
+Comuna: San Bernardo
+Comuna: Buin
+Comuna: Calera de Tango
+Comuna: Paine
+Comuna: Melipilla
+Comuna: Alhué
+Comuna: Curacaví
+Comuna: María Pinto
+Comuna: San Pedro
+Comuna: Talagante
+Comuna: El Monte
+Comuna: Isla de Maipo
+Comuna: Padre Hurtado
+Comuna: Peñaflor

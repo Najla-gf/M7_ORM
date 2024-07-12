@@ -1,40 +1,35 @@
 import os
 import django
-import csv
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'gestion_inmuebles.settings')
 django.setup()
 
-from gestionApp.models import Inmueble, Region, Comuna
-
-def consultar_inmuebles_por_region():
-    with open('Hito2/inmuebles_por_region.txt', 'w', newline='', encoding='utf-8') as f:
-        fieldnames = ['Región', 'Nombre', 'Descripción']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-
-        inmuebles = Inmueble.objects.select_related('region').all()
-        for inmueble in inmuebles:
-            writer.writerow({
-                'Región': inmueble.region.nombre,
-                'Nombre': inmueble.nombre,
-                'Descripción': inmueble.descripcion
-            })
+from gestionApp.models import Inmueble, Comuna, Region
 
 def consultar_inmuebles_por_comuna():
-    with open('Hito2/inmuebles_por_comuna.txt', 'w', newline='', encoding='utf-8') as f:
-        fieldnames = ['Comuna', 'Nombre', 'Descripción']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+    with open('PROYECTO/Hito2/inmuebles_por_comuna.txt', 'w', encoding='utf-8') as f:
+        f.write("Listado de Inmuebles por Comuna:\n\n")
+        
+        comunas = Comuna.objects.all()
+        for comuna in comunas:
+            f.write(f"Comuna: {comuna.nombre}\n")
+            inmuebles = Inmueble.objects.filter(comuna=comuna).only('nombre', 'descripcion')
+            for inmueble in inmuebles:
+                f.write(f"Nombre: {inmueble.nombre}\n")
+                f.write(f"Descripción: {inmueble.descripcion}\n\n")
 
-        inmuebles = Inmueble.objects.select_related('comuna').all()
-        for inmueble in inmuebles:
-            writer.writerow({
-                'Comuna': inmueble.comuna.nombre,
-                'Nombre': inmueble.nombre,
-                'Descripción': inmueble.descripcion
-            })
+def consultar_inmuebles_por_region():
+    with open('PROYECTO/Hito2/inmuebles_por_region.txt', 'w', encoding='utf-8') as f:
+        f.write("Listado de Inmuebles por Región:\n\n")
+        
+        regiones = Region.objects.all()
+        for region in regiones:
+            f.write(f"Región: {region.nombre}\n")
+            inmuebles = Inmueble.objects.filter(region=region).only('nombre', 'descripcion')
+            for inmueble in inmuebles:
+                f.write(f"Nombre: {inmueble.nombre}\n")
+                f.write(f"Descripción: {inmueble.descripcion}\n\n")
 
 if __name__ == "__main__":
-    consultar_inmuebles_por_region()
     consultar_inmuebles_por_comuna()
+    consultar_inmuebles_por_region()
