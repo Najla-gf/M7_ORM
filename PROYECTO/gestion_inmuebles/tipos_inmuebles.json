@@ -1,5 +1,5 @@
 [
-    {"nombre": "Casa"},
-    {"nombre": "Departamento"},
-    {"nombre": "Oficina"}
-] 
+    {"model": "gestionApp.tipoinmueble", "pk": 1, "fields": {"nombre": "Departamento"}},
+    {"model": "gestionApp.tipoinmueble", "pk": 2, "fields": {"nombre": "Casa"}},
+    {"model": "gestionApp.tipoinmueble", "pk": 3, "fields": {"nombre": "Oficina"}}
+]

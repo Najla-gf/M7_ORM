@@ -1,5 +1,6 @@
-[
-    {
+import json
+
+data = {
     "regiones": [
         {
             "region": "Arica y Parinacota",
@@ -66,5 +67,34 @@
             "comunas": ["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "Santiago", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "Tiltil", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"]
         }
     ]
+}
+
+regiones_data = []
+comunas_data = []
+
+for region_index, region_info in enumerate(data["regiones"], start=1):
+    region_dict = {
+        "model": "gestionApp.Region",
+        "pk": region_index,
+        "fields": {
+            "nombre": region_info["region"]
+        }
     }
-]
+    regiones_data.append(region_dict)
+    
+    for comuna_index, comuna in enumerate(region_info["comunas"], start=1):
+        comuna_dict = {
+            "model": "gestionApp.Comuna",
+            "pk": comuna_index,
+            "fields": {
+                "nombre": comuna,
+                "region": region_index
+            }
+        }
+        comunas_data.append(comuna_dict)
+
+with open("PROYECTO/gestion_inmuebles/regiones.json", "w", encoding='utf-8') as regiones_file:
+    json.dump(regiones_data, regiones_file, ensure_ascii=False, indent=4)
+
+with open("PROYECTO/gestion_inmuebles/comunas.json", "w", encoding='utf-8') as comunas_file:
+    json.dump(comunas_data, comunas_file, ensure_ascii=False, indent=4)

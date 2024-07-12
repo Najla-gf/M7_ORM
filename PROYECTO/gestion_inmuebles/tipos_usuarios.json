@@ -1,0 +1,4 @@
+[
+    {"model": "gestionApp.tipousuario", "pk": 1, "fields": {"nombre": "Arrendador"}},
+    {"model": "gestionApp.tipousuario", "pk": 2, "fields": {"nombre": "Arrendatario"}}
+]

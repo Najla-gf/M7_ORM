@@ -16,15 +16,13 @@ class Usuario(models.Model):
 
 class Region(models.Model):
     nombre = models.CharField(max_length=100)
-    numero = models.CharField(max_length=10)
-    numero_romano = models.CharField(max_length=10)
 
     def __str__(self):
         return self.nombre
 
 class Comuna(models.Model):
     nombre = models.CharField(max_length=100)
-    region = models.ForeignKey(Region, on_delete=models.CASCADE, related_name='comunas')
+    region = models.ForeignKey(Region, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre
@@ -46,7 +44,7 @@ class Inmueble(models.Model):
     direccion = models.CharField(max_length=255)
     tipo_inmueble = models.ForeignKey(TipoInmueble, on_delete=models.CASCADE)
     precio_mensual = models.DecimalField(max_digits=10, decimal_places=2)
-    arrendador = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    arrendado = models.BooleanField(null=False, default=False)
     region = models.ForeignKey(Region, on_delete=models.CASCADE)
     comuna = models.ForeignKey(Comuna, on_delete=models.CASCADE)
 

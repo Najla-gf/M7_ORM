@@ -1,0 +1,192 @@
+[
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 1,
+        "fields": {
+            "nombre": "Departamento en el centro",
+            "descripcion": "Cómodo departamento en el centro de la ciudad",
+            "m2_construidos": 70.0,
+            "m2_totales": 75.0,
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 2,
+            "cantidad_banos": 1,
+            "direccion": "Calle Falsa 123",
+            "tipo_inmueble": 1,
+            "precio_mensual": 350000,
+            "arrendado": false,
+            "region": 1,
+            "comuna": 1
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 2,
+        "fields": {
+            "nombre": "Casa en la playa",
+            "descripcion": "Amplia casa con vista al mar",
+            "m2_construidos": 150.0,
+            "m2_totales": 200.0,
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 4,
+            "cantidad_banos": 3,
+            "direccion": "Avenida del Mar 456",
+            "tipo_inmueble": 2,
+            "precio_mensual": 750000,
+            "arrendado": true,
+            "region": 2,
+            "comuna": 3
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 3,
+        "fields": {
+            "nombre": "Oficina en el centro financiero",
+            "descripcion": "Moderna oficina en el corazón del centro financiero",
+            "m2_construidos": 100.0,
+            "m2_totales": 100.0,
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 0,
+            "cantidad_banos": 2,
+            "direccion": "Paseo de las Empresas 789",
+            "tipo_inmueble": 3,
+            "precio_mensual": 500000,
+            "arrendado": false,
+            "region": 3,
+            "comuna": 5
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 4,
+        "fields": {
+            "nombre": "Cabaña en la montaña",
+            "descripcion": "Acogedora cabaña rodeada de naturaleza",
+            "m2_construidos": 90.0,
+            "m2_totales": 150.0,
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 3,
+            "cantidad_banos": 1,
+            "direccion": "Camino a la Montaña Km 10",
+            "tipo_inmueble": 2,
+            "precio_mensual": 450000,
+            "arrendado": true,
+            "region": 4,
+            "comuna": 7
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 5,
+        "fields": {
+            "nombre": "Departamento con terraza",
+            "descripcion": "Departamento moderno con amplia terraza",
+            "m2_construidos": 85.0,
+            "m2_totales": 95.0,
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 2,
+            "cantidad_banos": 2,
+            "direccion": "Calle Real 321",
+            "tipo_inmueble": 1,
+            "precio_mensual": 400000,
+            "arrendado": false,
+            "region": 1,
+            "comuna": 2
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 6,
+        "fields": {
+            "nombre": "Casa familiar en el campo",
+            "descripcion": "Espaciosa casa perfecta para familias",
+            "m2_construidos": 200.0,
+            "m2_totales": 300.0,
+            "cantidad_estacionamientos": 3,
+            "cantidad_habitaciones": 5,
+            "cantidad_banos": 4,
+            "direccion": "Ruta del Sol Km 20",
+            "tipo_inmueble": 2,
+            "precio_mensual": 800000,
+            "arrendado": true,
+            "region": 2,
+            "comuna": 4
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 7,
+        "fields": {
+            "nombre": "Estudio en el casco histórico",
+            "descripcion": "Estudio renovado en el casco histórico de la ciudad",
+            "m2_construidos": 45.0,
+            "m2_totales": 50.0,
+            "cantidad_estacionamientos": 0,
+            "cantidad_habitaciones": 1,
+            "cantidad_banos": 1,
+            "direccion": "Plaza Central 567",
+            "tipo_inmueble": 1,
+            "precio_mensual": 250000,
+            "arrendado": false,
+            "region": 3,
+            "comuna": 6
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 8,
+        "fields": {
+            "nombre": "Piso alto con vistas",
+            "descripcion": "Departamento en piso alto con impresionantes vistas de la ciudad",
+            "m2_construidos": 120.0,
+            "m2_totales": 130.0,
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 3,
+            "cantidad_banos": 2,
+            "direccion": "Avenida Principal 789",
+            "tipo_inmueble": 1,
+            "precio_mensual": 600000,
+            "arrendado": true,
+            "region": 4,
+            "comuna": 8
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 9,
+        "fields": {
+            "nombre": "Chalet en urbanización privada",
+            "descripcion": "Chalet en exclusiva urbanización con seguridad 24 horas",
+            "m2_construidos": 250.0,
+            "m2_totales": 400.0,
+            "cantidad_estacionamientos": 3,
+            "cantidad_habitaciones": 6,
+            "cantidad_banos": 5,
+            "direccion": "Calle Privada 111",
+            "tipo_inmueble": 2,
+            "precio_mensual": 1200000,
+            "arrendado": false,
+            "region": 5,
+            "comuna": 9
+        }
+    },
+    {
+        "model": "gestionApp.inmueble",
+        "pk": 10,
+        "fields": {
+            "nombre": "Apartamento moderno",
+            "descripcion": "Apartamento con diseño moderno y excelente ubicación",
+            "m2_construidos": 80.0,
+            "m2_totales": 85.0,
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 2,
+            "cantidad_banos": 2,
+            "direccion": "Calle Innovación 432",
+            "tipo_inmueble": 1,
+            "precio_mensual": 370000,
+            "arrendado": false,
+            "region": 1,
+            "comuna": 3
+        }
+    }
+]
