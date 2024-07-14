@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Buscar Propiedades</h1>
+    <form method="get" action="" class="row justify-content-center mb-4">
+        <div class="col-md-3">
+            <select name="tipo_inmueble" class="form-control">
+                <option value="">--- Tipo de Inmueble ---</option>
+                <option value="departamento">Departamento</option>
+                <option value="casa">Casa</option>
+                <option value="oficina">Oficina</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="region" class="form-control region-select">
+                <option value="">--- Seleccione Región ---</option>
+                {% for region in regiones %}
+                <option value="{{ region.id }}">{{ region.nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="comuna" class="form-control comuna-select">
+                <option value="">--- Seleccione Comuna ---</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">Buscar</button>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'index' %}" class="btn btn-secondary w-100">Mostrar Todos</a>
+        </div>
+    </form>
+    
+    <h2>Resultados de la búsqueda</h2>
+    <div class="row">
+        {% for property in properties %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ property.nombre }}</h5>
+                            <p class="card-text">{{ property.descripcion }}</p>
+                            <p class="card-text"><strong>Tipo:</strong> {{ property.tipo_inmueble.nombre }}</p>
+                            <p class="card-text"><strong>Región:</strong> {{ property.region.nombre }}</p>
+                            <p class="card-text"><strong>Comuna:</strong> {{ property.comuna.nombre }}</p>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

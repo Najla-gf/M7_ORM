@@ -18,6 +18,13 @@ pip install psycopg2
 pip install --upgrade pip
 pip list
 ```
+## Paso 3.5: Guardar archivo requirements.txt
+```bash
+pip freeze > requirements.txt
+```
+```plaintext
+Este comando captura todos los paquetes instalados actualmente en el entorno virtual junto a sus versiones.
+```
 
 ## Paso 4: Crear proyecto e ingresar a la carpeta
 ```bash
