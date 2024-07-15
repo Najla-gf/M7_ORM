@@ -1,8 +1,5 @@
 # Proyecto - Manejo del CRUD
 
-## Descripción
-El siguiente proyecto constituye una actividad que se desarrollará a lo largo de todo el siguiente módulo. Para ello, esta se dividirá en los 5 hitos (o partes) siguientes, que segmentarán los procesos que construirán completamente tu proyecto. Recuerda, por tanto, que este es un ejercicio acumulativo y que para avanzar al siguiente paso, siempre deberás contar con el desarrollo del hito que lo antecede. De tal manera, procura siempre avanzar y corregir aquellos elementos que sean necesarios para completar el siguiente proyecto.
-
 ## Contexto
 Una empresa dedicada al arriendo de inmuebles requiere de su ayuda para crear un sitio web donde usuarios puedan revisar inmuebles disponibles para el arriendo, separado por comuna y región. El sitio web poseerá dos tipos de usuarios: arrendatarios y arrendadores.
 
