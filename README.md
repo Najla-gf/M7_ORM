@@ -23,7 +23,7 @@ pip list
 pip freeze > requirements.txt
 ```
 ```plaintext
-Este comando captura todos los paquetes instalados actualmente en el entorno virtual junto a sus versiones.
+Captura todos los paquetes instalados actualmente en el entorno virtual junto a sus versiones.
 ```
 
 ## Paso 4: Crear proyecto e ingresar a la carpeta
